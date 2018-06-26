@@ -1,0 +1,15 @@
+{
+  "name": "react-js-validator",
+  "version": "1.0.0",
+  "description": "a simple package for react js validation",
+"Keywords":[
+"react validator",
+"react input validation"],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anil sidhu",
+  "license": "ISC"
+}
+

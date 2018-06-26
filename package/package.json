@@ -1,0 +1,26 @@
+{
+  "name": "react-js-validator",
+  "version": "1.0.0",
+  "description": "a simple package for apply input validation on react js validation such as numaric,email,letter,custom rejex,minimum length and max length etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "js",
+    "vaildation",
+    "react",
+    "js",
+    "validator",
+    "react",
+    "input",
+    "validation",
+    "validation",
+    "in",
+    "react",
+    "js"
+  ],
+  "author": "anil sidhu",
+  "license": "ISC"
+}
