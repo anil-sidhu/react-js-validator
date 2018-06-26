@@ -8,7 +8,11 @@ validation Methods:
 + AlphaNumeric
 + Email
 + CustomRx
- 
+ ## Installing
+Just simple command npm install command with package name
+````
+npm install react-js-validator
+````
  ## Example
 ````
 import React, { Component } from 'react';
