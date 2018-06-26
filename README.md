@@ -47,4 +47,13 @@ export default ValidationComponent;
 
 | params          | Required | Type     | Default value | Description                                                                                                                  |
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
-|   any String    | true     | string   |               | it will check email valdation and return object with 2 key. 1st msg and 2nd for status. status wil be false if valdation failed.                                                                 |
+|   any String    | Yes     | string   |               | it will check email valdation and return object with 2 key. 1st msg and 2nd for status. status wil be false if valdation failed.                                                                 |
+
+### Numeric
+
+| params          | Required | Type     | Default value | Description                                                                                                                  |
+|-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
+|  any Number         | Yes     | Number   |               | it will check Numaric valdation and return object with 2 key. 1st msg and 2nd for status. status wil be false if valdation failed. and it mustic be always 1st param                                                                |
+|  Number         | optional     | Number   |               | it will check minimum length of the number . it must be 2nd parameter.if validation false retruned status will be false. after that if you need only max lenth than put it null   
+
+|  Number         | optional     | Number   |               | it will check maximum length of the number. it must be 3nd parameter.if validation false retruned status will be false    |if you need only max lenth than put 2nd param null  
