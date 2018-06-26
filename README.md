@@ -55,6 +55,6 @@ export default ValidationComponent;
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
 |  any Number         | Yes     | Number   |               | it will check Numaric valdation and return object with 2 key. 1st msg and 2nd for status. status wil be false if valdation failed. and it mustic be always 1st param                                                                |
 |  Number         | optional     | Number   |               | it will check minimum length of the number . it must be 2nd parameter.if validation false retruned status will be false. after that if you need only max lenth than put it null
-|  Number         | optional     | Number   |               | it will check maximum length of the number. it must be 3nd parameter.if validation false retruned status will be false.if you need only max length than put 2nd params null for no mininmum lenght                                                                |
+|  Number         | optional     | Number   |               | it will check maximum length of the number. it must be 3nd parameter.if validation false returned status will be false.if you need only max length than put 2nd params null for no minimum length    |
 
 
