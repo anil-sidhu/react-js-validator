@@ -81,10 +81,10 @@ export default ValidationComponent;
 | params          | Required | Type     | Default value | Description                                                                                                                  |
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
 |any string or number| Yes     | String || Number   |               | it will check AlphaNumeric validation and means it allow letter as well number but not allow special characher and return object with 2 key. 1st msg and 2nd for status. status wil be false if validation failed. and it must be always 1st param.|
-|special character | optional     | bool   |               | it will check special character in the given value. It must be 2nd parameter.if validation false retruned status will be false.After special character if you need more params h than put it null
-|  Number         | optional     | Number   |               | it will check maximum length of the AlphaNumeric. It must be 3nd parameter.if validation false returned status will be false.if you need only max length than put 2nd params null for no minimum length    |
-|  min lenght          | optional     | Number   |               | it will check minimum length of the AlphaNumeric. It must be 2nd parameter.if validation false retruned status will be false. after that if you need only max length than put it null
-|  max lenght          | optional     | Number   |               | it will check maximum length of the AlphaNumeric. It must be 3nd parameter.if validation false returned status will be false.if you need only max length than put 2nd params null for no minimum length    |
+|special character | optional     | bool   |               | it will check special character in the given value. It must be 2nd parameter.if validation false retruned status will be false.After special character if you need more params than put it null
+| capital character| optional     | bool   |               | it will check capital character in the given Value. It must be 3nd parameter.if validation false returned status will be false.if you need only capital character params than put 2nd params null for no special length    |
+|  min lenght          | optional     | Number   |               | it will check minimum length of the AlphaNumeric. It must be 4th parameter.if validation false retruned status will be false. after that if you need only max length than 2nd and 3rd params null
+|  max lenght          | optional     | Number   |               | it will check maximum length of the AlphaNumeric. It must be 5th parameter.if validation false returned status will be false.if you need only max length than put 2nd,3rd and 4th params null   |
 
 
 
