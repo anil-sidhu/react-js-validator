@@ -135,4 +135,12 @@ export default HomeComponent;
 ### LetterInput
 | Props          | Required | Type     | Default value | Description                                                                                                                  |
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
-|  max    | optional     | int   |               | it will check Input  maximum length and return errorStatus true                                                                   |
+|  max    | optional     | int   |  null             | it will check Input  maximum length and return errorStatus true                                                                   |
+|  min    | optional     | int   |  null             | it will check Input  minimum length and return errorStatus true                                                                   |
+
+
+
+### EmailInput
+| Props          | Required | Type     | Default value | Description                                                                                                                  |
+|-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
+|  required    | optional     | boolean   |  null             | it will check field is required or not return errorStatus true                                                                   |
