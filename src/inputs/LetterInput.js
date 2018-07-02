@@ -12,15 +12,15 @@ export class LetterInput extends Component {
         super(props)
         this.state = {
             input: '',
-            errorStatus: '',
-            errorMsg: false
+            errorStatus: false,
+            errorMsg: true
         }
     }
-    static return = false
-   
+
+
     Valid(data) {
-        let result = Letter(data);
-        console.warn("result",data, result)
+        let result = Letter(data, this.props.min ? this.props.min : null, this.props.max ? this.props.max : null);
+        console.warn("result", data, result)
         if (result.status) {
             this.setState({ errorStatus: false, errorMsg: '' })
         }
@@ -31,17 +31,20 @@ export class LetterInput extends Component {
         if (this.props.onChange) {
             this.props.onChange()
         }
-        LetterInput.return = result
     }
     render() {
-        return (
-            <div >
-                <span className="error-span" style={this.props.styleError} >
-                    {this.state.errorStatus ? this.state.errorMsg : null}
-                </span>
-                <input  {...this.props} onChange={(e) => this.Valid(e.target.value)} type="text" />
-            </div>
-        );
+        let data = this.props
+        let collection = React.createElement("div", {},
+            React.createElement("span", { className: this.props.class ? this.props.class : 'error-span' }, this.state.errorMsg),
+            React.createElement("input", {
+                type: "text",
+                onChange: (e) => this.Valid(e.target.value),
+                onBlur: (e) => this.props.return(this.state.errorStatus)
+            }
+            )
+        )
+        return (collection)
     }
 }
+
 

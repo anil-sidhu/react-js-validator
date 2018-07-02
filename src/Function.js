@@ -38,42 +38,49 @@ export const Letter = function (data = '', min = null, max = null) {
     if (data.match(letters)) {
         errorMsg.msg = "Correct Value"
         errorMsg.status = true
-    }
-    else if (min || max) {
-        errorMsg = lengthValidator(data, min, max)
+
+        if (min || max) {
+            errorMsg = lengthValidator(data, min, max)
+        }
     }
     else {
         errorMsg.msg = "Please type letters only"
         errorMsg.status = false
     }
+
+
     return errorMsg;
 }
 
 export const AlphaNumeric = function (data = '', min = null, max = null) {
     let errorMsg = {};
-    console.warn("income",data)
     let letterNumber = /^[0-9a-zA-Z]+$/;
     data ? data : data = ''
+    console.warn("income AlphaNumeric nx", data, min, max)
+
     if (data.match(letterNumber)) {
         errorMsg.msg = "Correct Value"
         errorMsg.status = true
-    } 
-    if (min || max) {
-        errorMsg = lengthValidator(data, min, max)
+
+        if (min || max) {
+            errorMsg = lengthValidator(data, min, max)
+        }
     }
     else {
         errorMsg.msg = "Please type letters and number only "
         errorMsg.status = false
     }
+
+
     return errorMsg;
 }
 
 export const Email = function (data = '') {
     let errorMsg = {};
     data ? data : data = ''
-    console.warn("comming data",data)
-    let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
-    
+    console.warn("comming data", data)
+    let email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
     if (data.match(email)) {
         errorMsg.msg = "Correct Value"
         errorMsg.status = true

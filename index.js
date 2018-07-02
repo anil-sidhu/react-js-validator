@@ -1,5 +1,4 @@
-import './style.css'
-export { NumberInput } from './src/inputs/NumberInput';
+import './src/style.css'
 export { EmailInput } from './src/inputs/EmailInput';
 export { LetterInput } from './src/inputs/LetterInput';
 export { AlphaNumericInput } from './src/inputs/AlphaNumericInput';

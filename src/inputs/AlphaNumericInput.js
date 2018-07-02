@@ -14,12 +14,11 @@ export class AlphaNumericInput extends Component {
         this.state = {
             input: '',
             errorStatus: '',
-            errorMsg: false
+            errorMsg: true
         }
     }
-    static return = false
     Valid(data) {
-        let result = AlphaNumeric(data);
+        let result = AlphaNumeric(data, this.props.min ?this.props.min:null, this.props.max ?this.props.max:null);
         console.warn("result", result)
         if (result.status) {
             this.setState({ errorStatus: false, errorMsg: '' })
@@ -31,17 +30,22 @@ export class AlphaNumericInput extends Component {
         if (this.props.onChange) {
             this.props.onChange()
         }
-        AlphaNumericInput.return = result
     }
+    // onChange: (e) => this.Valid(e.target.value, this.props.min ? this.props.min : null, this.props.max ? this.props.max : null),
+    
     render() {
-        return (
-            <div >
-                <span className="error-span" style={this.props.styleError} >
-                    {this.state.errorStatus ? this.state.errorMsg : null}
-                </span>
-                <input  {...this.props} onChange={(e) => this.Valid(e.target.value)} type="text" />
-            </div>
-        );
+        
+        let data = this.props
+        let collection = React.createElement("div", {},
+            React.createElement("span", { className: this.props.class ? this.props.class : 'error-span' }, this.state.errorMsg),
+            React.createElement("input", {
+                type: "text",
+                onChange: (e) => this.Valid(e.target.value),
+                onBlur: (e) => this.props.return(this.state.errorStatus)
+            }
+            )
+        )
+        return (collection)
     }
 }
 
