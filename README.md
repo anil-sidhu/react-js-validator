@@ -145,3 +145,11 @@ export default HomeComponent;
 | Props          | Required | Type     | Default value | Description                                                                                                                  |
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
 |  return    | optional     | callback function   |  null             | it will return the callback status and function should be pass here with a parammeter                                                                   |
+
+
+### AlphaNumericInput
+| Props          | Required | Type     | Default value | Description                                                                                                                  |
+|-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
+|  max    | optional     | int   |  null             | it will check Input  maximum length and return errorStatus true                                                                   |
+|  min    | optional     | int   |  null             | it will check Input  minimum length and return errorStatus true                                                                   |
+|  return    | optional     | callback function   |  null             | it will return the callback status and function should be pass here with a parammeter             
