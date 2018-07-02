@@ -20,36 +20,37 @@ Just simple command npm install command with package name
 ````
 npm install react-js-validator
 ````
- ## Example
+ ## Example for Use Method
 ````
-import React, { Component } from 'react';
-import { Valid, Numeric, Letter, AlphaNumeric, Email, CustomRx } from 'react-js-validator'
+iimport React, { Component } from 'react';
+import Container from '../Containers/Container';
+import { Email,Numeric,Letter,AlphaNumeric,CustomRx,Required } from 'react-js-validator'
+class HomeComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: null,
+    }; 
+  }
 
-class ValidationComponent extends Component {
-    state = {
-        email: null,
-    };
-    vaildate() {
-        let letterNumber = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-        console.warn("value", this.state.email)
-        let result = Email(this.state.email);
-        console.warn("result", result)
-        return result
-    }
-    render() {
+  validate() {
+    let result = Email(this.state.email);
+    console.warn("result", result)
+  }
+  render() {
+    return (
+      <div>
+        <EmailInput max={10} min={3} />
+        <input onBlur={() => this.validate()} onChange={(e) => { this.setState({ email: e.target.value }) }} />
+      </div>
 
-        return (
-            <div>
-                Validation Component
-                <input onBlur={() => this.vaildate(Email(this.state.email)) } onChange={(e) => { this.setState({ email: e.target.value }) }}  />
-               
-                <button onClick={() => this.submit()}>click me </button>
-            </div>
-        )
-    }
+    );
+  }
 }
 
-export default ValidationComponent;
+
+export default HomeComponent;
+
 ````
 
 ## Package Functions
