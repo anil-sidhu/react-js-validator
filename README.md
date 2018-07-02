@@ -133,6 +133,11 @@ export default HomeComponent;
 ## Component props and callback function
 
 ### LetterInput
+| Props          | Required | Type     | Default value | Description                                                                                                                  |
+|-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
+|  max    | optional     | int   |               | it will check Input  maximum length and return errorStatus true                                                                   |
+
+
 
 | props | Required | Type | Description                                                      |
 |   max | optional | int | it will check Input  maximum length and return errorStatus true   |
