@@ -137,10 +137,11 @@ export default HomeComponent;
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
 |  max    | optional     | int   |  null             | it will check Input  maximum length and return errorStatus true                                                                   |
 |  min    | optional     | int   |  null             | it will check Input  minimum length and return errorStatus true                                                                   |
+|  return    | optional     | callback function   |  null             | it will return the callback status and function should be pass here with a parammeter             
 
 
 
 ### EmailInput
 | Props          | Required | Type     | Default value | Description                                                                                                                  |
 |-----------------|----------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
-|  required    | optional     | boolean   |  null             | it will check field is required or not return errorStatus true                                                                   |
+|  return    | optional     | callback function   |  null             | it will return the callback status and function should be pass here with a parammeter                                                                   |
