@@ -1,7 +1,7 @@
 # React-js-validator
 Component providing simple input validation for react js. use can use validation function directly or custom input for vaildation.
 
-## use method or custom Input list is below
+### Use Method Directly or Use custom Input listed below
 #### validation Methods:
 + Email
 + Numeric
