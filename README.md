@@ -1,12 +1,20 @@
 # React-js-validator
-Validation library for React js 
+Component providing simple input validation for react js. use can use validation function directly or custom input for vaildation.
 
-validation Methods:
+## use method or custom Input list is below
+#### validation Methods:
 + Email
 + Numeric
 + Letter
 + AlphaNumeric
 + CustomRx
+
+#### custom Input Components:
++ EmailInput
++ LetterInput
++ AlphaNumericInput
+
+
  ## Installing
 Just simple command npm install command with package name
 ````
