@@ -96,4 +96,36 @@ export default HomeComponent;
 |  max lenght          | optional     | Number   |               | it will check maximum length of the AlphaNumeric. It must be 5th parameter.if validation false returned status will be false.if you need only max length than put 2nd,3rd and 4th params null   |
 
 
+## Example for Custom Input Use
 
+````
+import React, { Component } from 'react';
+import Container from '../Containers/Container';
+import { EmailInput, LetterInput, AlphaNumericInput } from 'react-js-validator'
+class HomeComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: null,
+    };
+  }
+  handleCallback(data) {
+    console.warn("status", data)
+  }
+  render() {
+    
+    return (
+      <div>
+
+        HomeComponent..
+        <LetterInput max={10} min={3} return={this.handleCallback.bind(this)} />
+       
+      </div>
+
+    );
+  }
+}
+
+
+export default HomeComponent;
+````
