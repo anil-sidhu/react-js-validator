@@ -129,3 +129,11 @@ class HomeComponent extends Component {
 
 export default HomeComponent;
 ````
+
+## Component props and callback function
+
+### LetterInput
+
+| props | Required | Type | Description                                                      |
+|   max | optional | int | it will check Input  maximum length and return errorStatus true   |
+
